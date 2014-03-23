@@ -19,6 +19,7 @@
 		12BCC20918DE6467001FD561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1F118DE6467001FD561 /* UIKit.framework */; };
 		12BCC21118DE6467001FD561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12BCC20F18DE6467001FD561 /* InfoPlist.strings */; };
 		12BCC21318DE6467001FD561 /* MindYourPillsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BCC21218DE6467001FD561 /* MindYourPillsTests.m */; };
+		A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22BC18DF95FD00D518E0 /* EventsList.m */; };
 		D1B594D318DF7DF000FEE44B /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B594CB18DF7DF000FEE44B /* AddViewController.m */; };
 		D1B594D418DF7DF000FEE44B /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B594CC18DF7DF000FEE44B /* AddViewController.xib */; };
 		D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B594CE18DF7DF000FEE44B /* EditViewController.m */; };
@@ -54,6 +55,8 @@
 		12BCC20E18DE6467001FD561 /* MindYourPillsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MindYourPillsTests-Info.plist"; sourceTree = "<group>"; };
 		12BCC21018DE6467001FD561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12BCC21218DE6467001FD561 /* MindYourPillsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindYourPillsTests.m; sourceTree = "<group>"; };
+		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsList.h; sourceTree = "<group>"; };
+		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsList.m; sourceTree = "<group>"; };
 		D1B594CA18DF7DF000FEE44B /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		D1B594CB18DF7DF000FEE44B /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		D1B594CC18DF7DF000FEE44B /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 		12BCC1E118DE6467001FD561 = {
 			isa = PBXGroup;
 			children = (
+				A53E22BB18DF95FD00D518E0 /* EventsList.h */,
+				A53E22BC18DF95FD00D518E0 /* EventsList.m */,
 				D1B594CA18DF7DF000FEE44B /* AddViewController.h */,
 				D1B594CB18DF7DF000FEE44B /* AddViewController.m */,
 				D1B594CC18DF7DF000FEE44B /* AddViewController.xib */,
@@ -268,6 +273,7 @@
 			files = (
 				D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */,
 				12BCC1FE18DE6467001FD561 /* AppDelegate.m in Sources */,
+				A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */,
 				D1B594D718DF7DF000FEE44B /* HomepageViewController.m in Sources */,
 				12BCC1FA18DE6467001FD561 /* main.m in Sources */,
 				D1B594D318DF7DF000FEE44B /* AddViewController.m in Sources */,
