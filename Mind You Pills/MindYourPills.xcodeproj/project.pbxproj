@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12BCC1B318DE63EF001FD561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1B218DE63EF001FD561 /* Foundation.framework */; };
+		12BCC1B518DE63EF001FD561 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1B418DE63EF001FD561 /* CoreGraphics.framework */; };
+		12BCC1B718DE63EF001FD561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1B618DE63EF001FD561 /* UIKit.framework */; };
+		12BCC1BD18DE63EF001FD561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12BCC1BB18DE63EF001FD561 /* InfoPlist.strings */; };
+		12BCC1BF18DE63F0001FD561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BCC1BE18DE63F0001FD561 /* main.m */; };
+		12BCC1C318DE63F0001FD561 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BCC1C218DE63F0001FD561 /* AppDelegate.m */; };
+		12BCC1C518DE63F0001FD561 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12BCC1C418DE63F0001FD561 /* Images.xcassets */; };
+		12BCC1CC18DE63F0001FD561 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1CB18DE63F0001FD561 /* XCTest.framework */; };
+		12BCC1CD18DE63F0001FD561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1B218DE63EF001FD561 /* Foundation.framework */; };
+		12BCC1CE18DE63F0001FD561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1B618DE63EF001FD561 /* UIKit.framework */; };
+		12BCC1D618DE63F0001FD561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12BCC1D418DE63F0001FD561 /* InfoPlist.strings */; };
+		12BCC1D818DE63F0001FD561 /* Mind_You_PillsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BCC1D718DE63F0001FD561 /* Mind_You_PillsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12BCC1CF18DE63F0001FD561 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12BCC1A718DE63EF001FD561 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12BCC1AE18DE63EF001FD561;
+			remoteInfo = "Mind You Pills";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12BCC1AF18DE63EF001FD561 /* Mind You Pills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mind You Pills.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12BCC1B218DE63EF001FD561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		12BCC1B418DE63EF001FD561 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		12BCC1B618DE63EF001FD561 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		12BCC1BA18DE63EF001FD561 /* Mind You Pills-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mind You Pills-Info.plist"; sourceTree = "<group>"; };
+		12BCC1BC18DE63EF001FD561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12BCC1BE18DE63F0001FD561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12BCC1C018DE63F0001FD561 /* Mind You Pills-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mind You Pills-Prefix.pch"; sourceTree = "<group>"; };
+		12BCC1C118DE63F0001FD561 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		12BCC1C218DE63F0001FD561 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		12BCC1C418DE63F0001FD561 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		12BCC1CA18DE63F0001FD561 /* Mind You PillsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mind You PillsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12BCC1CB18DE63F0001FD561 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		12BCC1D318DE63F0001FD561 /* Mind You PillsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mind You PillsTests-Info.plist"; sourceTree = "<group>"; };
+		12BCC1D518DE63F0001FD561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12BCC1D718DE63F0001FD561 /* Mind_You_PillsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mind_You_PillsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12BCC1AC18DE63EF001FD561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1B518DE63EF001FD561 /* CoreGraphics.framework in Frameworks */,
+				12BCC1B718DE63EF001FD561 /* UIKit.framework in Frameworks */,
+				12BCC1B318DE63EF001FD561 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12BCC1C718DE63F0001FD561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1CC18DE63F0001FD561 /* XCTest.framework in Frameworks */,
+				12BCC1CE18DE63F0001FD561 /* UIKit.framework in Frameworks */,
+				12BCC1CD18DE63F0001FD561 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12BCC1A618DE63EF001FD561 = {
+			isa = PBXGroup;
+			children = (
+				12BCC1B818DE63EF001FD561 /* Mind You Pills */,
+				12BCC1D118DE63F0001FD561 /* Mind You PillsTests */,
+				12BCC1B118DE63EF001FD561 /* Frameworks */,
+				12BCC1B018DE63EF001FD561 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		12BCC1B018DE63EF001FD561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1AF18DE63EF001FD561 /* Mind You Pills.app */,
+				12BCC1CA18DE63F0001FD561 /* Mind You PillsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12BCC1B118DE63EF001FD561 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1B218DE63EF001FD561 /* Foundation.framework */,
+				12BCC1B418DE63EF001FD561 /* CoreGraphics.framework */,
+				12BCC1B618DE63EF001FD561 /* UIKit.framework */,
+				12BCC1CB18DE63F0001FD561 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12BCC1B818DE63EF001FD561 /* Mind You Pills */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1C118DE63F0001FD561 /* AppDelegate.h */,
+				12BCC1C218DE63F0001FD561 /* AppDelegate.m */,
+				12BCC1C418DE63F0001FD561 /* Images.xcassets */,
+				12BCC1B918DE63EF001FD561 /* Supporting Files */,
+			);
+			path = "Mind You Pills";
+			sourceTree = "<group>";
+		};
+		12BCC1B918DE63EF001FD561 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1BA18DE63EF001FD561 /* Mind You Pills-Info.plist */,
+				12BCC1BB18DE63EF001FD561 /* InfoPlist.strings */,
+				12BCC1BE18DE63F0001FD561 /* main.m */,
+				12BCC1C018DE63F0001FD561 /* Mind You Pills-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12BCC1D118DE63F0001FD561 /* Mind You PillsTests */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1D718DE63F0001FD561 /* Mind_You_PillsTests.m */,
+				12BCC1D218DE63F0001FD561 /* Supporting Files */,
+			);
+			path = "Mind You PillsTests";
+			sourceTree = "<group>";
+		};
+		12BCC1D218DE63F0001FD561 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12BCC1D318DE63F0001FD561 /* Mind You PillsTests-Info.plist */,
+				12BCC1D418DE63F0001FD561 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12BCC1AE18DE63EF001FD561 /* Mind You Pills */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12BCC1DB18DE63F0001FD561 /* Build configuration list for PBXNativeTarget "Mind You Pills" */;
+			buildPhases = (
+				12BCC1AB18DE63EF001FD561 /* Sources */,
+				12BCC1AC18DE63EF001FD561 /* Frameworks */,
+				12BCC1AD18DE63EF001FD561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mind You Pills";
+			productName = "Mind You Pills";
+			productReference = 12BCC1AF18DE63EF001FD561 /* Mind You Pills.app */;
+			productType = "com.apple.product-type.application";
+		};
+		12BCC1C918DE63F0001FD561 /* Mind You PillsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12BCC1DE18DE63F0001FD561 /* Build configuration list for PBXNativeTarget "Mind You PillsTests" */;
+			buildPhases = (
+				12BCC1C618DE63F0001FD561 /* Sources */,
+				12BCC1C718DE63F0001FD561 /* Frameworks */,
+				12BCC1C818DE63F0001FD561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12BCC1D018DE63F0001FD561 /* PBXTargetDependency */,
+			);
+			name = "Mind You PillsTests";
+			productName = "Mind You PillsTests";
+			productReference = 12BCC1CA18DE63F0001FD561 /* Mind You PillsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12BCC1A718DE63EF001FD561 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Sarah Wada";
+				TargetAttributes = {
+					12BCC1C918DE63F0001FD561 = {
+						TestTargetID = 12BCC1AE18DE63EF001FD561;
+					};
+				};
+			};
+			buildConfigurationList = 12BCC1AA18DE63EF001FD561 /* Build configuration list for PBXProject "Mind You Pills" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 12BCC1A618DE63EF001FD561;
+			productRefGroup = 12BCC1B018DE63EF001FD561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12BCC1AE18DE63EF001FD561 /* Mind You Pills */,
+				12BCC1C918DE63F0001FD561 /* Mind You PillsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12BCC1AD18DE63EF001FD561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1BD18DE63EF001FD561 /* InfoPlist.strings in Resources */,
+				12BCC1C518DE63F0001FD561 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12BCC1C818DE63F0001FD561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1D618DE63F0001FD561 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12BCC1AB18DE63EF001FD561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1C318DE63F0001FD561 /* AppDelegate.m in Sources */,
+				12BCC1BF18DE63F0001FD561 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12BCC1C618DE63F0001FD561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BCC1D818DE63F0001FD561 /* Mind_You_PillsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12BCC1D018DE63F0001FD561 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12BCC1AE18DE63EF001FD561 /* Mind You Pills */;
+			targetProxy = 12BCC1CF18DE63F0001FD561 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		12BCC1BB18DE63EF001FD561 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12BCC1BC18DE63EF001FD561 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		12BCC1D418DE63F0001FD561 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12BCC1D518DE63F0001FD561 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12BCC1D918DE63F0001FD561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		12BCC1DA18DE63F0001FD561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12BCC1DC18DE63F0001FD561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mind You Pills/Mind You Pills-Prefix.pch";
+				INFOPLIST_FILE = "Mind You Pills/Mind You Pills-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		12BCC1DD18DE63F0001FD561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mind You Pills/Mind You Pills-Prefix.pch";
+				INFOPLIST_FILE = "Mind You Pills/Mind You Pills-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		12BCC1DF18DE63F0001FD561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mind You Pills.app/Mind You Pills";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mind You Pills/Mind You Pills-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Mind You PillsTests/Mind You PillsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		12BCC1E018DE63F0001FD561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mind You Pills.app/Mind You Pills";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mind You Pills/Mind You Pills-Prefix.pch";
+				INFOPLIST_FILE = "Mind You PillsTests/Mind You PillsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12BCC1AA18DE63EF001FD561 /* Build configuration list for PBXProject "Mind You Pills" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12BCC1D918DE63F0001FD561 /* Debug */,
+				12BCC1DA18DE63F0001FD561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12BCC1DB18DE63F0001FD561 /* Build configuration list for PBXNativeTarget "Mind You Pills" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12BCC1DC18DE63F0001FD561 /* Debug */,
+				12BCC1DD18DE63F0001FD561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		12BCC1DE18DE63F0001FD561 /* Build configuration list for PBXNativeTarget "Mind You PillsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12BCC1DF18DE63F0001FD561 /* Debug */,
+				12BCC1E018DE63F0001FD561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12BCC1A718DE63EF001FD561 /* Project object */;
+}
