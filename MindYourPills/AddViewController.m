@@ -62,10 +62,12 @@ BOOL sun = false;
 
 - (IBAction)confirm:(id)sender
 {
+
     NSString *name = nameTextField.text;
     NSString *reason = reasonTextField.text;
     NSString *amount = amountTextField.text;
     NSString *form = formPickerView.description;
+    NSDate *endDate; // TODO: IMPLEMENT IN FRONT END
     double times = timesStepper.value;
 
     NSMutableArray * eventsList = [EventsList sharedEventListInstance];

@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *reason;
 // debug: string for now, might change (int + string value)
 @property (nonatomic, strong) NSString *amount;
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSDate *endDate;
 
 
 // debug: is stored value of UIPickerView an NSString?

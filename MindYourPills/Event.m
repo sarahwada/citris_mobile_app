@@ -14,7 +14,7 @@
 @synthesize reason;
 // debug: string for now, might change (int + string value)
 @synthesize amount;
-@synthesize date;
+@synthesize endDate;
 
 // debug: is stored value of UIPickerView an NSString?
 @synthesize form;
@@ -32,7 +32,7 @@
         form = f;
         times = t;
         missedFlag = 0;
-        date = nil;
+        endDate = nil;
     }
     return self;
 }
