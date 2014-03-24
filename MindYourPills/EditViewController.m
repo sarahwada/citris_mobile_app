@@ -7,6 +7,8 @@
 //
 
 #import "EditViewController.h"
+#import "AddViewController.h"
+#import "HomepageViewController.h"
 
 @interface EditViewController ()
 
@@ -23,16 +25,28 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (IBAction)addMedicine:(id)sender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSLog(@"Add button Tapped!");
+    AddViewController *avc = [[AddViewController alloc] initWithNibName:@"AddViewController"
+                                                                   bundle:nil];
+    [self presentViewController:avc animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)confirm: (id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Confirm button tapped!");
+    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
+                                                                           bundle:nil];
+    [self presentViewController:hvc animated:YES completion:nil];
+}
+
+- (IBAction)cancel: (id)sender
+{
+    NSLog(@"Cancel button tapped!");
+    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
+                                                                           bundle:nil];
+    [self presentViewController:hvc animated:YES completion:nil];
 }
 
 @end

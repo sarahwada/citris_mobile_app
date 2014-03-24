@@ -11,6 +11,14 @@
 #import "EditViewController.h"
 
 @interface HomepageViewController ()
+
+@property (nonatomic, weak) IBOutlet UITableView *upcomingTableView;
+@property (nonatomic, weak) IBOutlet UIImageView *nextPillImageView;
+@property (nonatomic, weak) IBOutlet UILabel *dateLabel;
+@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *reasonLabel;
+
 @end
 
 @implementation HomepageViewController
@@ -41,6 +49,9 @@
 - (IBAction)listPills:(id)sender
 {
     NSLog(@"listpills button Tapped!");
+    EditViewController *evc = [[EditViewController alloc] initWithNibName:@"EditViewController"
+                                                                   bundle:nil];
+    [self presentViewController:evc animated:YES completion:nil];
 }
 
 - (IBAction)addPills:(id)sender

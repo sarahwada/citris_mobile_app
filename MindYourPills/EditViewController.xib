@@ -45,6 +45,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMedicine:" destination="-1" eventType="touchUpInside" id="0yG-68-BoO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="577-hz-70U">
                                 <rect key="frame" x="210" y="9" width="90" height="35"/>
@@ -53,6 +56,9 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirm:" destination="-1" eventType="touchUpInside" id="KPR-GB-Ouu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZU1-iV-PHq">
                                 <rect key="frame" x="20" y="9" width="90" height="35"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="-1" eventType="touchUpInside" id="WU2-3s-2DW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.81744581650000003" alpha="1" colorSpace="calibratedWhite"/>
