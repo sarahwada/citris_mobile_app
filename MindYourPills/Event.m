@@ -14,19 +14,25 @@
 @synthesize reason;
 // debug: string for now, might change (int + string value)
 @synthesize amount;
+@synthesize date;
 
 // debug: is stored value of UIPickerView an NSString?
 @synthesize form;
-@synthesize date;
-@synthesize frequency;
+@synthesize times;
 
 // Flag to show if medication has been missed or not
 @synthesize missedFlag;
 
--(id) init {
+-(Event*) initWithName:(NSString *) n andReason:(NSString *) r andAmount:(NSString *) a andForm:(NSString *) f andTimes:(double) t {
     self = [super init];
     if (self) {
+        name = n;
+        reason = r;
+        amount = a;
+        form = f;
+        times = t;
         missedFlag = 0;
+        date = nil;
     }
     return self;
 }

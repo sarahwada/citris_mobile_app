@@ -7,15 +7,18 @@
 //
 
 #import "AddViewController.h"
+#import "EventsList.h"
+#import "Event.h"
+
 
 @interface AddViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *reasonTextField;
 @property (nonatomic, weak) IBOutlet UITextField *amountTextField;
-@property (nonatomic, weak) IBOutlet UITextField *frequencyTextField;
+
+@property (nonatomic, weak) IBOutlet UIStepper *timesStepper;
 @property (nonatomic, weak) IBOutlet UIPickerView *formPickerView;
-@property (nonatomic, weak) IBOutlet UIDatePicker *timeDatePicker;
 
 @end
 
@@ -24,9 +27,8 @@
 @synthesize nameTextField;
 @synthesize reasonTextField;
 @synthesize amountTextField;
-@synthesize frequencyTextField;
+@synthesize timesStepper;
 @synthesize formPickerView;
-@synthesize timeDatePicker;
 
 - (IBAction)save:(id)sender
 {
@@ -34,12 +36,53 @@
     NSString *reason = reasonTextField.text;
     NSString *amount = amountTextField.text;
     NSString *form = formPickerView.description;
-    NSDate *date = timeDatePicker.date;
-    NSInteger *frequency = frequencyTextField.text.integerValue;
+    double times = timesStepper.value;
 
+    NSMutableArray * eventsList = [EventsList sharedEventListInstance];
+    Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
+
+    [eventsList addObject:eventToAdd];
+    
 }
 
 - (IBAction)exit:(id)sender
+{
+    
+}
+
+
+- (IBAction)monday:(id)sender
+{
+    
+}
+
+- (IBAction)tuesday:(id)sender
+{
+    
+}
+
+
+- (IBAction)wednesday:(id)sender
+{
+    
+}
+
+- (IBAction)thursday:(id)sender
+{
+    
+}
+
+- (IBAction)friday:(id)sender
+{
+    
+}
+
+- (IBAction)saturday:(id)sender
+{
+    
+}
+
+- (IBAction)sunday:(id)sender
 {
     
 }
