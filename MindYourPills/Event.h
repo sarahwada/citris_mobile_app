@@ -15,6 +15,7 @@
 // debug: string for now, might change (int + string value)
 @property (nonatomic, strong) NSString *amount;
 @property (nonatomic, strong) NSDate *endDate;
+@property (nonatomic, strong) NSDate *compareTime;
 
 
 // debug: is stored value of UIPickerView an NSString?

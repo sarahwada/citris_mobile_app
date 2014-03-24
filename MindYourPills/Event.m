@@ -14,6 +14,7 @@
 @synthesize reason;
 // debug: string for now, might change (int + string value)
 @synthesize amount;
+@synthesize compareTime;
 @synthesize endDate;
 
 // debug: is stored value of UIPickerView an NSString?
@@ -32,6 +33,8 @@
         form = f;
         times = t;
         missedFlag = 0;
+        // For comparison in priority queue, implement when adding to priority queue
+        compareTime = nil;
         endDate = nil;
     }
     return self;
