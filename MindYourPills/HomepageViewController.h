@@ -10,4 +10,8 @@
 
 @interface HomepageViewController : UIViewController
 
+- (IBAction)listPills:(id)sender;
+- (IBAction)addPills:(id)sender;
+
+
 @end
