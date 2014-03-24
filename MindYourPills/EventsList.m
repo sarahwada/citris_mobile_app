@@ -12,7 +12,7 @@
 
 static NSMutableArray *sharedEventListInstance = nil;
 
-+ (NSMutableArray *)sharedEventListInstance {
++ (NSMutableArray *) sharedEventListInstance {
  
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
