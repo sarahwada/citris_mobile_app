@@ -7,12 +7,14 @@
 //
 
 #import "HomepageViewController.h"
+#import "AddViewController.h"  
+#import "EditViewController.h"
 
 @interface HomepageViewController ()
-
 @end
 
 @implementation HomepageViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,4 +37,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)listPills:(id)sender
+{
+    NSLog(@"listpills button Tapped!");
+}
+
+- (IBAction)addPills:(id)sender
+{
+    NSLog(@"addpills button Tapped!");
+    AddViewController *addVC = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+    [self presentViewController:addVC animated:YES completion:nil];
+
+}
 @end
