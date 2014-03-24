@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126DA80018DF9DFE00233962 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 126DA7FF18DF9DFE00233962 /* Event.m */; };
 		12BCC1EE18DE6467001FD561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1ED18DE6467001FD561 /* Foundation.framework */; };
 		12BCC1F018DE6467001FD561 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1EF18DE6467001FD561 /* CoreGraphics.framework */; };
 		12BCC1F218DE6467001FD561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1F118DE6467001FD561 /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126DA7FE18DF9DFE00233962 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		126DA7FF18DF9DFE00233962 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		12BCC1EA18DE6467001FD561 /* MindYourPills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindYourPills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BCC1ED18DE6467001FD561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12BCC1EF18DE6467001FD561 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +104,8 @@
 		12BCC1E118DE6467001FD561 = {
 			isa = PBXGroup;
 			children = (
+				126DA7FE18DF9DFE00233962 /* Event.h */,
+				126DA7FF18DF9DFE00233962 /* Event.m */,
 				A53E22C418DFB14600D518E0 /* EventsPriorityQueue.h */,
 				A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */,
 				A53E22C118DFAA2600D518E0 /* UpcomingEventsQueue.h */,
@@ -283,12 +288,16 @@
 			files = (
 				D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */,
 				12BCC1FE18DE6467001FD561 /* AppDelegate.m in Sources */,
+				D1B594D718DF7DF000FEE44B /* HomepageViewController.m in Sources */,
+				12BCC1FA18DE6467001FD561 /* main.m in Sources */,
+				D1B594D318DF7DF000FEE44B /* AddViewController.m in Sources */,
 				A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */,
 				D1B594D718DF7DF000FEE44B /* HomepageViewController.m in Sources */,
 				A53E22C618DFB14600D518E0 /* EventsPriorityQueue.m in Sources */,
 				12BCC1FA18DE6467001FD561 /* main.m in Sources */,
 				A53E22C318DFAA2600D518E0 /* UpcomingEventsQueue.m in Sources */,
 				D1B594D318DF7DF000FEE44B /* AddViewController.m in Sources */,
+				126DA80018DF9DFE00233962 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

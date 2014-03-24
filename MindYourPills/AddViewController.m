@@ -21,9 +21,22 @@
 
 @implementation AddViewController
 
+@synthesize nameTextField;
+@synthesize reasonTextField;
+@synthesize amountTextField;
+@synthesize frequencyTextField;
+@synthesize formPickerView;
+@synthesize timeDatePicker;
+
 - (IBAction)save:(id)sender
 {
-    
+    NSString *name = nameTextField.text;
+    NSString *reason = reasonTextField.text;
+    NSString *amount = amountTextField.text;
+    NSString *form = formPickerView.description;
+    NSDate *date = timeDatePicker.date;
+    NSInteger *frequency = frequencyTextField.text.integerValue;
+
 }
 
 - (IBAction)exit:(id)sender
