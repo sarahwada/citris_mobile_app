@@ -30,6 +30,13 @@
 @synthesize timesStepper;
 @synthesize formPickerView;
 
+BOOL mon = false;
+BOOL tue = false;
+BOOL wed = false;
+BOOL thu = false;
+BOOL fri = false;
+BOOL sat = false;
+BOOL sun = false;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,7 +60,7 @@
 }
 
 
-- (IBAction)save:(id)sender
+- (IBAction)confirm:(id)sender
 {
     NSString *name = nameTextField.text;
     NSString *reason = reasonTextField.text;
@@ -65,49 +72,49 @@
     Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
 
     [eventsList addObject:eventToAdd];
-    
+    NSLog(@"added event");
 }
 
-- (IBAction)exit:(id)sender
+- (IBAction)cancel:(id)sender
 {
-    
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 - (IBAction)monday:(id)sender
 {
-    
+    mon = true;
 }
 
 - (IBAction)tuesday:(id)sender
 {
-    
+    tue = true;
 }
 
 
 - (IBAction)wednesday:(id)sender
 {
-    
+    wed = true;
 }
 
 - (IBAction)thursday:(id)sender
 {
-    
+    thu = true;
 }
 
 - (IBAction)friday:(id)sender
 {
-    
+    fri = true;
 }
 
 - (IBAction)saturday:(id)sender
 {
-    
+    sat = true;
 }
 
 - (IBAction)sunday:(id)sender
 {
-    
+    sun = true;
 }
 
 @end

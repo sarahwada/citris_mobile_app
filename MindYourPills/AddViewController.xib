@@ -90,7 +90,7 @@
                         <navigationItem title="Add Medication" id="vaB-vv-Fea"/>
                     </items>
                 </navigationBar>
-                <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="YfK-as-Blc">
+                <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="YfK-as-Blc">
                     <rect key="frame" x="0.0" y="513" width="320" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YfK-as-Blc" id="VGV-7R-W3l">
@@ -105,7 +105,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="exit:" destination="-1" eventType="touchUpInside" id="Qjt-rC-fc9"/>
+                                    <action selector="cancel:" destination="-1" eventType="touchUpInside" id="ux1-P9-3Re"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-fl-xcM">
@@ -116,7 +116,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="save:" destination="-1" eventType="touchUpInside" id="cHk-ij-Dys"/>
+                                    <action selector="confirm:" destination="-1" eventType="touchUpInside" id="LQ3-p5-odE"/>
                                 </connections>
                             </button>
                         </subviews>
