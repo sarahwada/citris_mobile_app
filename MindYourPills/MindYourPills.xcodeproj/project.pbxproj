@@ -19,14 +19,14 @@
 		12BCC20918DE6467001FD561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1F118DE6467001FD561 /* UIKit.framework */; };
 		12BCC21118DE6467001FD561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12BCC20F18DE6467001FD561 /* InfoPlist.strings */; };
 		12BCC21318DE6467001FD561 /* MindYourPillsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BCC21218DE6467001FD561 /* MindYourPillsTests.m */; };
+		12F226C618DFE4A0006ECAE5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F226C418DFE4A0006ECAE5 /* AddViewController.m */; };
+		12F226C718DFE4A0006ECAE5 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F226C518DFE4A0006ECAE5 /* AddViewController.xib */; };
+		12F226CB18DFE4C3006ECAE5 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */; };
+		12F226CC18DFE4C3006ECAE5 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */; };
+		12F226CE18DFE5AF006ECAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F226CD18DFE5AF006ECAE5 /* main.m */; };
 		A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22BC18DF95FD00D518E0 /* EventsList.m */; };
 		A53E22C318DFAA2600D518E0 /* UpcomingEventsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22C218DFAA2600D518E0 /* UpcomingEventsQueue.m */; };
 		A53E22C618DFB14600D518E0 /* EventsPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */; };
-		A53E22CA18DFE45F00D518E0 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22C818DFE45F00D518E0 /* AddViewController.m */; };
-		A53E22CB18DFE45F00D518E0 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53E22C918DFE45F00D518E0 /* AddViewController.xib */; };
-		A53E22CF18DFE49A00D518E0 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22CD18DFE49A00D518E0 /* HomepageViewController.m */; };
-		A53E22D018DFE49A00D518E0 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53E22CE18DFE49A00D518E0 /* HomepageViewController.xib */; };
-		A53E22D218DFE58600D518E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22D118DFE58600D518E0 /* main.m */; };
 		D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B594CE18DF7DF000FEE44B /* EditViewController.m */; };
 		D1B594D618DF7DF000FEE44B /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B594CF18DF7DF000FEE44B /* EditViewController.xib */; };
 /* End PBXBuildFile section */
@@ -59,19 +59,19 @@
 		12BCC20E18DE6467001FD561 /* MindYourPillsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MindYourPillsTests-Info.plist"; sourceTree = "<group>"; };
 		12BCC21018DE6467001FD561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12BCC21218DE6467001FD561 /* MindYourPillsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindYourPillsTests.m; sourceTree = "<group>"; };
+		12F226C318DFE4A0006ECAE5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		12F226C418DFE4A0006ECAE5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		12F226C518DFE4A0006ECAE5 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
+		12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
+		12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageViewController.xib; sourceTree = "<group>"; };
+		12F226CD18DFE5AF006ECAE5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsList.h; sourceTree = "<group>"; };
 		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsList.m; sourceTree = "<group>"; };
 		A53E22C118DFAA2600D518E0 /* UpcomingEventsQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingEventsQueue.h; sourceTree = "<group>"; };
 		A53E22C218DFAA2600D518E0 /* UpcomingEventsQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingEventsQueue.m; sourceTree = "<group>"; };
 		A53E22C418DFB14600D518E0 /* EventsPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPriorityQueue.h; sourceTree = "<group>"; };
 		A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPriorityQueue.m; sourceTree = "<group>"; };
-		A53E22C718DFE45F00D518E0 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
-		A53E22C818DFE45F00D518E0 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
-		A53E22C918DFE45F00D518E0 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
-		A53E22CC18DFE49A00D518E0 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
-		A53E22CD18DFE49A00D518E0 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
-		A53E22CE18DFE49A00D518E0 /* HomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageViewController.xib; sourceTree = "<group>"; };
-		A53E22D118DFE58600D518E0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1B594CD18DF7DF000FEE44B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		D1B594CE18DF7DF000FEE44B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		D1B594CF18DF7DF000FEE44B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
@@ -104,12 +104,13 @@
 		12BCC1E118DE6467001FD561 = {
 			isa = PBXGroup;
 			children = (
-				A53E22CC18DFE49A00D518E0 /* HomepageViewController.h */,
-				A53E22CD18DFE49A00D518E0 /* HomepageViewController.m */,
-				A53E22CE18DFE49A00D518E0 /* HomepageViewController.xib */,
-				A53E22C718DFE45F00D518E0 /* AddViewController.h */,
-				A53E22C818DFE45F00D518E0 /* AddViewController.m */,
-				A53E22C918DFE45F00D518E0 /* AddViewController.xib */,
+
+				12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */,
+				12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */,
+				12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */,
+				12F226C318DFE4A0006ECAE5 /* AddViewController.h */,
+				12F226C418DFE4A0006ECAE5 /* AddViewController.m */,
+				12F226C518DFE4A0006ECAE5 /* AddViewController.xib */,
 				126DA7FE18DF9DFE00233962 /* Event.h */,
 				126DA7FF18DF9DFE00233962 /* Event.m */,
 				A53E22C418DFB14600D518E0 /* EventsPriorityQueue.h */,
@@ -162,7 +163,8 @@
 		12BCC1F418DE6467001FD561 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A53E22D118DFE58600D518E0 /* main.m */,
+
+				12F226CD18DFE5AF006ECAE5 /* main.m */,
 				12BCC1F518DE6467001FD561 /* MindYourPills-Info.plist */,
 				12BCC1F618DE6467001FD561 /* InfoPlist.strings */,
 				12BCC1FB18DE6467001FD561 /* MindYourPills-Prefix.pch */,
@@ -265,9 +267,9 @@
 			files = (
 				D1B594D618DF7DF000FEE44B /* EditViewController.xib in Resources */,
 				12BCC1F818DE6467001FD561 /* InfoPlist.strings in Resources */,
-				A53E22CB18DFE45F00D518E0 /* AddViewController.xib in Resources */,
+				12F226C718DFE4A0006ECAE5 /* AddViewController.xib in Resources */,
 				12BCC20018DE6467001FD561 /* Images.xcassets in Resources */,
-				A53E22D018DFE49A00D518E0 /* HomepageViewController.xib in Resources */,
+				12F226CC18DFE4C3006ECAE5 /* HomepageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +290,12 @@
 			files = (
 				D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */,
 				12BCC1FE18DE6467001FD561 /* AppDelegate.m in Sources */,
-				A53E22CF18DFE49A00D518E0 /* HomepageViewController.m in Sources */,
-				A53E22CA18DFE45F00D518E0 /* AddViewController.m in Sources */,
+				12F226CB18DFE4C3006ECAE5 /* HomepageViewController.m in Sources */,
+				12F226C618DFE4A0006ECAE5 /* AddViewController.m in Sources */,
 				A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */,
 				A53E22C618DFB14600D518E0 /* EventsPriorityQueue.m in Sources */,
 				A53E22C318DFAA2600D518E0 /* UpcomingEventsQueue.m in Sources */,
-				A53E22D218DFE58600D518E0 /* main.m in Sources */,
+				12F226CE18DFE5AF006ECAE5 /* main.m in Sources */,
 				126DA80018DF9DFE00233962 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
