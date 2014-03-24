@@ -75,7 +75,7 @@
     
     Event *parent = [self.queue objectAtIndex:parent_index];
     
-    while (object.date < parent.date) //compare with parent
+    while (object.compareTime < parent.compareTime) //compare with parent
     {
         [self.queue removeObject:object];
         [self.queue insertObject:object atIndex:parent_index];
@@ -127,14 +127,14 @@
         {
             child_2 = [self.queue objectAtIndex:child + 1];
             
-            if (child_2.date < child_obj.date)
+            if (child_2.compareTime < child_obj.compareTime)
             {
                 child++;
                 child_obj = child_2;
             }
         }
         
-        if (last_object.date > child_obj.date)
+        if (last_object.compareTime > child_obj.compareTime)
         {
             [self.queue removeObject:child_obj];
             [self.queue insertObject:child_obj atIndex:i];
