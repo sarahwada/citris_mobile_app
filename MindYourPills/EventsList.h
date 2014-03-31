@@ -10,8 +10,7 @@
 
 @interface EventsList : NSObject
 
-+ (NSMutableArray *)sharedEventListInstance;
-
-
+@property (nonatomic, retain) NSMutableArray *sharedEvents;
++ (EventsList *)sharedEventsList;
 
 @end

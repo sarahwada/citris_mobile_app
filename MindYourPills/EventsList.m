@@ -8,18 +8,24 @@
 
 #import "EventsList.h"
 
+@interface EventsList ()
+
+//@property (nonatomic, retain) NSMutableArray *sharedEvents;
+
+@end
+
 @implementation EventsList
-
-static NSMutableArray *sharedEventListInstance = nil;
-
-+ (NSMutableArray *) sharedEventListInstance {
+@synthesize sharedEvents;
++ (EventsList *) sharedEventsList {
  
+    static EventsList *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedEventListInstance = [[self alloc] init];
+        shared = [[EventsList alloc] init];
+        shared.sharedEvents = [[NSMutableArray alloc] init];
     });
-    
-    return sharedEventListInstance;
+
+    return shared;
 }
 
 - (id) init {

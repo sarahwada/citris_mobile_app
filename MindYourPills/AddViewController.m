@@ -70,11 +70,15 @@ BOOL sun = false;
     //NSDate *endDate; // TODO: IMPLEMENT IN FRONT END
     double times = timesStepper.value;
 
-    NSMutableArray * eventsList = [EventsList sharedEventListInstance];
+    
+    //NSLog(@"name: %@, reason: %@, amount: %@, form: %@, times:%f", name, reason, amount, form, times);
+    EventsList *eventsList = [EventsList sharedEventsList];
     Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
 
-    [eventsList addObject:eventToAdd];
-    NSLog(@"added event");
+    NSLog(@"%@", eventToAdd);
+    [eventsList.sharedEvents addObject:eventToAdd];
+    NSLog(@"%@", eventsList.sharedEvents[0]);
+    //NSLog(@"added event");
 }
 
 - (IBAction)cancel:(id)sender
