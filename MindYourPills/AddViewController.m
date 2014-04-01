@@ -9,6 +9,7 @@
 #import "AddViewController.h"
 #import "EventsList.h"
 #import "Event.h"
+#import "HomepageViewController.h"
 
 
 @interface AddViewController ()
@@ -50,6 +51,12 @@ BOOL sun = false;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    amountTextField.returnKeyType = UIReturnKeyDone;
+    [amountTextField setDelegate:self];
+    reasonTextField.returnKeyType = UIReturnKeyDone;
+    [reasonTextField setDelegate:self];
+    nameTextField.returnKeyType = UIReturnKeyDone;
+    [nameTextField setDelegate:self];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -70,16 +77,24 @@ BOOL sun = false;
     NSDate *endDate; // TODO: IMPLEMENT IN FRONT END
     double times = timesStepper.value;
 
-    NSMutableArray * eventsList = [EventsList sharedEventListInstance];
+    
+    NSLog(@"name: %@, reason: %@, amount: %@, form: %@, times:%f", name, reason, amount, form, times);
+    EventsList *eventsList = [EventsList sharedEventsList];
     Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
 
-    [eventsList addObject:eventToAdd];
-    NSLog(@"added event");
+    NSLog(@"%@", eventToAdd);
+    [eventsList.sharedEvents addObject:eventToAdd];
+    NSLog(@"%@", eventsList.sharedEvents[0]);
+    //NSLog(@"added event");
 }
 
 - (IBAction)cancel:(id)sender
 {
     //[self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"Cancel button Tapped!");
+    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
+                                                                 bundle:nil];
+    [self presentViewController:hvc animated:YES completion:nil];
 }
 
 
@@ -117,6 +132,13 @@ BOOL sun = false;
 - (IBAction)sunday:(id)sender
 {
     sun = true;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end
