@@ -92,9 +92,16 @@
     NSDate *fd = [NSDate date];
     NSDate *ld = [NSDate date];
     NSMutableArray *st = [[NSMutableArray alloc] init];
+    BOOL mon = false;
+    BOOL tue = false;
+    BOOL wed = false;
+    BOOL thu = false;
+    BOOL fri = false;
+    BOOL sat = false;
+    BOOL sun = false;
     
     double times = 10;
-    Event *event = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times andFirstDay:fd andLastDay:ld andScheduleTimes:st];
+    Event *event = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times andFirstDay:fd andLastDay:ld andScheduleTimes:st andMon:mon andTue:tue andWed:wed andThu:thu andFri:fri andSat:sat andSun:sun];
     
     EventsList *eventsList = [EventsList sharedEventsList];
     NSMutableArray *sharedEventsList = eventsList.sharedEvents;
@@ -104,9 +111,13 @@
 
 
     Event *eventAdd = [[Event alloc] init];
-    NSDate * currDateTime = [NSDate date];
     
     for (int i = 0; i < [sharedEventsList count]; i++) {
+        // getEventsInNextHour
+        // put times in sortedUpcomingEvents dict with (k,v) = (time, event)
+        // put times in sortedEventTimes array
+        
+        
         //handling
         eventAdd = sharedEventsList[i];
         
@@ -143,8 +154,9 @@
     
     // Configure the cell...
     
-    // Check for out of bounds indexing
-    Event *event = [self.sortedUpcomingEvents objectAtIndex:indexPath.row];
+    NSDate *key = [self.sortedEventTimes objectAtIndex:indexPath.row];
+    // DICTIONARY has (key, list_of_events_at_this_time) --> change to display list of events
+    Event *event = [self.sortedUpcomingEvents objectForKey:key];
     cell.textLabel.text = event.name;
     
     return cell;
