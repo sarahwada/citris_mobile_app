@@ -123,8 +123,13 @@
         
         //handling
         eventAdd = sharedEventsList[i];
-        eventKey = eventAdd.getKey();
-        if ([eventKeys containsObject:eventKey])
+        NSDate *eventKey = eventAdd.getKey();
+        if ([eventKeys containsObject:eventKey]) {
+            [eventsDict[eventKey] addObject:[eventAdd]];
+        } else {
+            eventsDict[eventKey] = [NSMutableArray arrayWithObjects:eventAdd];
+            [eventKeys addObject:[eventKey]];
+        }
         
         
         //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
@@ -137,6 +142,7 @@
         
         NSLog(@"here");
     }
+    
 
 }
 
