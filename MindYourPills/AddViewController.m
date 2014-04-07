@@ -77,11 +77,15 @@
     self.fri = false;
     self.sat = false;
     self.sun = false;
+    
     self.timesStepper.wraps = NO;
     self.timesStepper.autorepeat = YES;
     NSUInteger value = self.timesStepper.value;
     self.stepperValueLabel.text = [NSString stringWithFormat:@"%02d", value];
     self.timesStepper.minimumValue = 0;
+    self.timesStepper.maximumValue = 99;
+    
+    self.selectedForm = [self.formsList objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,16 +113,17 @@
     NSLog(@"%@", eventToAdd);
     [eventsList.sharedEvents addObject:eventToAdd];
     NSLog(@"%@", eventsList.sharedEvents[0]);
-    //NSLog(@"added event");
 }
 
 - (IBAction)cancel:(id)sender
 {
     //[self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"Cancel button Tapped!");
-    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
+/*    HomepageViewController *hvc = [[HomepageViewController allow] initWithNibName:@"HomepageViewController"
                                                                  bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self presentViewController:hvc animated:YES completion:nil];*/
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
