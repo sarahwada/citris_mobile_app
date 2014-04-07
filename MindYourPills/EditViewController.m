@@ -78,7 +78,7 @@
     
     // Configure the cell...
     Event *nextEvent = [self.myMedications objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"I am cell %@", [nextEvent name]]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"Next event: %@", [nextEvent name]]];
     
     return cell;
 }
@@ -143,7 +143,7 @@
 - (void)loadMedDataAlphabetically
 {
     NSArray *sharedEvents = [[EventsList sharedEventsList] sharedEvents];
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
     NSArray *sortedArray = [sharedEvents sortedArrayUsingDescriptors: [NSArray arrayWithObject:sort]];
     self.myMedications = sortedArray;
 }
