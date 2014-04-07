@@ -20,7 +20,7 @@
 
 // debug: is stored value of UIPickerView an NSString?
 @property (nonatomic, strong) NSString *form;
-@property (nonatomic) double times;
+@property (nonatomic) uint times;
 
 // Flag to show if medication has been missed or not
 @property (nonatomic, strong) NSNumber *missedFlag;
