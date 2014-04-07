@@ -112,6 +112,9 @@
 
     Event *eventAdd = [[Event alloc] init];
     
+    NSMutableDictionary *eventsDict = [NSMutableDictionary dictionary];
+    NSMutableArray *eventKeys = [NSMutableArray array];
+    
     for (int i = 0; i < [sharedEventsList count]; i++) {
         // getEventsInNextHour
         // put times in sortedUpcomingEvents dict with (k,v) = (time, event)
@@ -120,6 +123,9 @@
         
         //handling
         eventAdd = sharedEventsList[i];
+        eventKey = eventAdd.getKey();
+        if ([eventKeys containsObject:eventKey])
+        
         
         //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
         //[outputFormatter setDateFormat:@"HH:mm:ss"];
