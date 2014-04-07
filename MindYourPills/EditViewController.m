@@ -148,6 +148,11 @@
     self.myMedications = sortedArray;
 }
 
+- (void) refreshData
+{
+    [self loadMedDataAlphabetically];
+}
+
 - (IBAction)addMedicine:(id)sender
 {
     NSLog(@"Add button Tapped!");
