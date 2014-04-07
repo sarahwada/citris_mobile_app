@@ -159,17 +159,15 @@
 - (IBAction)confirm: (id)sender
 {
     NSLog(@"Confirm button tapped!");
-    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
-                                                                           bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (IBAction)cancel: (id)sender
 {
     NSLog(@"Cancel button tapped!");
-    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
-                                                                           bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 @end

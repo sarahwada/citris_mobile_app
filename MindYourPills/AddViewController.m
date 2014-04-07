@@ -113,16 +113,14 @@
     NSLog(@"%@", eventToAdd);
     [eventsList.sharedEvents addObject:eventToAdd];
     NSLog(@"%@", eventsList.sharedEvents[0]);
+    
+    NSLog(@"Confirm button Tapped!");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancel:(id)sender
 {
-    //[self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"Cancel button Tapped!");
-/*    HomepageViewController *hvc = [[HomepageViewController allow] initWithNibName:@"HomepageViewController"
-                                                                 bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];*/
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
