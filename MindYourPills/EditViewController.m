@@ -46,6 +46,14 @@
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"REFRESH EDIT VIEW!");
+    [self refreshData];
+    [_tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -148,6 +156,11 @@
     self.myMedications = sortedArray;
 }
 
+- (void) refreshData
+{
+    [self loadMedDataAlphabetically];    
+}
+
 - (IBAction)addMedicine:(id)sender
 {
     NSLog(@"Add button Tapped!");
@@ -159,17 +172,15 @@
 - (IBAction)confirm: (id)sender
 {
     NSLog(@"Confirm button tapped!");
-    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
-                                                                           bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (IBAction)cancel: (id)sender
 {
     NSLog(@"Cancel button tapped!");
-    HomepageViewController *hvc = [[HomepageViewController alloc] initWithNibName:@"HomepageViewController"
-                                                                           bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 @end

@@ -38,6 +38,8 @@
 @property (nonatomic) BOOL fri;
 @property (nonatomic) BOOL sat;
 @property (nonatomic) BOOL sun;
+@property (nonatomic) UIAlertView *confirmAlert;
+@property (nonatomic) UIAlertView *cancelAlert;
 
 @end
 
@@ -86,6 +88,20 @@
     self.timesStepper.maximumValue = 99;
     
     self.selectedForm = [self.formsList objectAtIndex:0];
+    
+    self.confirmAlert = [[UIAlertView alloc] initWithTitle:@"Is all your information correct?"
+                               message:@"The entry will be saved if you press submit. You can go back to editing your information by pressing cancel."
+                              delegate:self
+                     cancelButtonTitle:@"Cancel"
+                     otherButtonTitles:nil];
+    [self.confirmAlert addButtonWithTitle:@"Submit"];
+    
+    self.cancelAlert = [[UIAlertView alloc] initWithTitle:@"Are you sure you want to cancel?"
+                                                   message:@"Any changes will not be saved."
+                                                  delegate:self
+                                         cancelButtonTitle:@"No"
+                                         otherButtonTitles:nil];
+    [self.cancelAlert addButtonWithTitle:@"Yes"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,33 +113,14 @@
 
 - (IBAction)confirm:(id)sender
 {
-
-    NSString *name = nameTextField.text;
-    NSString *reason = reasonTextField.text;
-    NSString *amount = amountTextField.text;
-    NSString *form = self.selectedForm;
-    //NSDate *endDate; // TODO: IMPLEMENT IN FRONT END
-    uint times = (uint)self.timesStepper.value;
-
-    
-    NSLog(@"name: %@, reason: %@, amount: %@, form: %@, times:%d", name, reason, amount, form, times);
-    EventsList *eventsList = [EventsList sharedEventsList];
-    Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
-
-    NSLog(@"%@", eventToAdd);
-    [eventsList.sharedEvents addObject:eventToAdd];
-    NSLog(@"%@", eventsList.sharedEvents[0]);
+    NSLog(@"Confirm button Tapped!");
+    [self.confirmAlert show];
 }
 
 - (IBAction)cancel:(id)sender
 {
-    //[self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"Cancel button Tapped!");
-/*    HomepageViewController *hvc = [[HomepageViewController allow] initWithNibName:@"HomepageViewController"
-                                                                 bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];*/
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.cancelAlert show];
 }
 
 
@@ -198,11 +195,11 @@
     if (self.sat) {
         self.sat = false;
         [self.saturdayButton setTitle:@"" forState:UIControlStateNormal];
-        NSLog(@"Friday not set");
+        NSLog(@"Saturday not set");
     } else {
         self.sat = true;
         [self.saturdayButton setTitle:@"X" forState:UIControlStateNormal];
-        NSLog(@"Friday set");
+        NSLog(@"Saturday set");
     }
 }
 
@@ -264,11 +261,38 @@
             break;
     }
 }
-\
+
 - (IBAction)changeValue:(UIStepper *)sender
 {
     NSUInteger value = sender.value;
     self.stepperValueLabel.text = [NSString stringWithFormat:@"%02d", value];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqualToString:@"Submit"]){
+        NSLog(@"Submit button clicked");
+        NSString *name = nameTextField.text;
+        NSString *reason = reasonTextField.text;
+        NSString *amount = amountTextField.text;
+        NSString *form = self.selectedForm;
+        //NSDate *endDate; // TODO: IMPLEMENT IN FRONT END
+        uint times = (uint)self.timesStepper.value;
+        
+        
+        NSLog(@"name: %@, reason: %@, amount: %@, form: %@, times:%d", name, reason, amount, form, times);
+        EventsList *eventsList = [EventsList sharedEventsList];
+        Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
+        
+        NSLog(@"%@", eventToAdd);
+        [eventsList.sharedEvents addObject:eventToAdd];
+        NSLog(@"%@", eventsList.sharedEvents[0]);
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else if ([buttonTitle isEqualToString:@"Yes"]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 
