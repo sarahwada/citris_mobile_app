@@ -46,6 +46,14 @@
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"REFRESH EDIT VIEW!");
+    [self refreshData];
+    [_tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -150,7 +158,7 @@
 
 - (void) refreshData
 {
-    [self loadMedDataAlphabetically];
+    [self loadMedDataAlphabetically];    
 }
 
 - (IBAction)addMedicine:(id)sender
