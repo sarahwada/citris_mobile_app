@@ -21,9 +21,11 @@
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *reasonLabel;
 
-// To fill the upcomingTableView, will be sorted
+// the shared EventsList object
 @property (nonatomic, weak) NSMutableArray *eventsList;
-@property (nonatomic) NSMutableArray *sortedUpcomingEvents;
+//
+@property (nonatomic) NSDictionary *sortedUpcomingEvents;
+@property (nonatomic) NSMutableArray *sortedEventTimes;
 @end
 
 @implementation HomepageViewController
@@ -42,7 +44,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.sortedUpcomingEvents = [[NSMutableArray alloc] init];
+    self.sortedUpcomingEvents = [[NSDictionary alloc] init];
     [self loadInitialData];
     
     // To set a class to load the table cells for
@@ -87,8 +89,12 @@
     NSString *reason = @"reason1";
     NSString *amount = @"amount1";
     NSString *form = @"form1";
+    NSDate *fd = [NSDate date];
+    NSDate *ld = [NSDate date];
+    NSMutableArray *st = [[NSMutableArray alloc] init];
+    
     double times = 10;
-    Event *event = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
+    Event *event = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times andFirstDay:fd andLastDay:ld andScheduleTimes:st];
     
     EventsList *eventsList = [EventsList sharedEventsList];
     NSMutableArray *sharedEventsList = eventsList.sharedEvents;

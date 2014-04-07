@@ -12,20 +12,18 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *reason;
-// debug: string for now, might change (int + string value)
 @property (nonatomic, strong) NSString *amount;
-@property (nonatomic, strong) NSDate *endDate;
-@property (nonatomic, strong) NSDate *compareTime;
-
-
-// debug: is stored value of UIPickerView an NSString?
 @property (nonatomic, strong) NSString *form;
 @property (nonatomic) uint times;
+
+@property (nonatomic, strong) NSDate *firstDay;
+@property (nonatomic, strong) NSDate *lastDay;
+@property (nonatomic, strong) NSMutableArray *scheduleTimes;
 
 // Flag to show if medication has been missed or not
 @property (nonatomic, strong) NSNumber *missedFlag;
 
--(Event*) initWithName:(NSString *) n andReason:(NSString *) r andAmount:(NSString *) a andForm:(NSString *) f andTimes:(double) t;
+-(Event*) initWithName:(NSString *) n andReason:(NSString *) r andAmount:(NSString *) a andForm:(NSString *) f andTimes:(uint) t andFirstDay:(NSDate *) fd andLastDay:(NSDate *) ld andScheduleTimes:(NSMutableArray *) st;
 
 
 @end
