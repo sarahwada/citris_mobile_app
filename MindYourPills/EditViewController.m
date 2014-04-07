@@ -46,6 +46,14 @@
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"REFRESH EDIT VIEW!");
+    [self refreshData];
+    [_tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -146,6 +154,11 @@
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
     NSArray *sortedArray = [sharedEvents sortedArrayUsingDescriptors: [NSArray arrayWithObject:sort]];
     self.myMedications = sortedArray;
+}
+
+- (void) refreshData
+{
+    [self loadMedDataAlphabetically];    
 }
 
 - (IBAction)addMedicine:(id)sender
