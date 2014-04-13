@@ -17,6 +17,9 @@
     // Override point for customization after application launch.
     HomepageViewController * hpViewController = [[HomepageViewController alloc] init];
     self.window.rootViewController = hpViewController;
+
+//    scheduleTimesViewController * stViewController = [[scheduleTimesViewController alloc] init];
+//    self.window.rootViewController = stViewController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
