@@ -24,8 +24,9 @@
 // the shared EventsList object
 @property (nonatomic, weak) NSMutableArray *eventsList;
 //
-@property (nonatomic) NSDictionary *sortedUpcomingEvents;
+@property (nonatomic) NSMutableDictionary *upcomingEvents;
 @property (nonatomic) NSMutableArray *sortedEventTimes;
+
 @end
 
 @implementation HomepageViewController
@@ -35,7 +36,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.upcomingEvents = [NSMutableDictionary dictionary];
+        self.sortedEventTimes = [NSMutableArray array];
     }
     return self;
 }
@@ -44,7 +46,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.sortedUpcomingEvents = [[NSDictionary alloc] init];
+    self.upcomingEvents = [[NSDictionary alloc] init];
     [self loadInitialData];
     
     // To set a class to load the table cells for
@@ -135,6 +137,8 @@
         //    [eventKeys addObject:[eventKey]];
         //}
         
+        
+        
         //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
         //[outputFormatter setDateFormat:@"HH:mm:ss"];
         
@@ -146,6 +150,7 @@
         NSLog(@"Homepage medication list: iterating through sharedEventsList");
     }
     
+    // TODO: sort eventsDict
 
 }
 
