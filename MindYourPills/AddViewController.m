@@ -283,7 +283,7 @@
         
         NSLog(@"name: %@, reason: %@, amount: %@, form: %@, times:%d", name, reason, amount, form, times);
         EventsList *eventsList = [EventsList sharedEventsList];
-        Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times];
+        Event *eventToAdd = [[Event alloc] initWithName:name andReason:reason andAmount:amount andForm:form andTimes:times andFirstDay:NULL andLastDay: NULL andScheduleTimes: NULL andMon: self.mon andTue: self.tue andWed: self.wed andThu: self.thu andFri: self.fri andSat: self.sat andSun: self.sun];
         
         NSLog(@"%@", eventToAdd);
         [eventsList.sharedEvents addObject:eventToAdd];

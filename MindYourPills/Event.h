@@ -34,5 +34,6 @@
 
 -(Event*) initWithName:(NSString *) n andReason:(NSString *) r andAmount:(NSString *) a andForm:(NSString *) f andTimes:(uint) t andFirstDay:(NSDate *) fd andLastDay:(NSDate *) ld andScheduleTimes:(NSMutableArray *) st andMon:(BOOL) mon andTue:(BOOL) tues andWed:(BOOL) wed andThu:(BOOL) thu andFri:(BOOL) fri andSat:(BOOL) sat andSun:(BOOL) sun;
 
+-(NSMutableArray*) getEventsInNextHour;
 
 @end

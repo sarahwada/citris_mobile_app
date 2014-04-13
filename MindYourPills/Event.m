@@ -7,6 +7,7 @@
 //
 
 #import "Event.h"
+#import "EventToDisplay.h"
 
 @implementation Event
 
@@ -15,6 +16,7 @@
 // debug: string for now, might change (int + string value)
 @synthesize amount;
 @synthesize form;
+// Number of times per day or repeated????
 @synthesize times;
 @synthesize firstDay;
 @synthesize lastDay;
@@ -27,7 +29,6 @@
 @synthesize fri;
 @synthesize sat;
 @synthesize sun;
-
 
 @synthesize missedFlag;
 
@@ -68,23 +69,51 @@
      * Calculation of the values is based on: firstDay, lastDay, and scheduleTimes.
      * Weekday calculations start from Monday, ie Monday's integer value is 1.
      */
+    NSLog(@"In getEventsInNextHour");
     NSDate *now = [NSDate date];
     NSMutableArray *eventsInNextHour = [[NSMutableArray alloc] init];
+    
+    NSTimeInterval secondsInOneHour = 1 * 60 * 60;
+    NSDate *dateOneHourAhead = [now dateByAddingTimeInterval:secondsInOneHour];
+    
+    //if (firstDay > now || lastDay < now) {
+    //    return eventsInNextHour;
+    //}
+    
+    // Get the current day, and the day of +1hour
+    NSDateFormatter* dayFormatter = [[NSDateFormatter alloc] init];
+    [dayFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [dayFormatter setDateFormat:@"EEEE"];
+    NSString *weekDay =  [dayFormatter stringFromDate:now];
+    NSString *weekDayPlusHour = [dayFormatter stringFromDate:dateOneHourAhead];
 
-    if (firstDay > now || lastDay < now) {
-        return eventsInNextHour;
+    // Get the current time, and time of +1 hour
+    NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+    [timeFormatter setDateFormat:@"HH:mm"];
+    NSDate *timeNow = [timeFormatter dateFromString:[timeFormatter stringFromDate:now]];
+    NSDate *timePlusHour = [timeFormatter dateFromString:[timeFormatter stringFromDate:dateOneHourAhead]];
+
+    
+    // If today has a medication reminder:
+    if ((self.mon && ([weekDay isEqualToString: @"Monday"] || [weekDayPlusHour isEqualToString: @"Monday"])) ||
+        (self.tue && ([weekDay isEqualToString: @"Tuesday"] || [weekDayPlusHour isEqualToString: @"Tuesday"])) ||
+        (self.wed && ([weekDay isEqualToString: @"Wednesday"] || [weekDayPlusHour isEqualToString: @"Wednesday"])) ||
+        (self.thu && ([weekDay isEqualToString: @"Thursday"] || [weekDayPlusHour isEqualToString: @"Thursay"])) ||
+        (self.fri && ([weekDay isEqualToString: @"Friday"] || [weekDayPlusHour isEqualToString: @"Friday"])) ||
+        (self.sat && ([weekDay isEqualToString: @"Saturday"] || [weekDayPlusHour isEqualToString: @"Saturday"])) ||
+        (self.sun && ([weekDay isEqualToString: @"Sunday"] || [weekDayPlusHour isEqualToString: @"Sunday"]))) {
+
+        // For all times today:
+        for (int i = 0; i < [self.scheduleTimes count]; i++) {
+            NSDate *scheduledTime = [timeFormatter dateFromString:self.scheduleTimes[i]];
+            // If  timeNow <= scheduledTime <= timePlusHour:
+            if(([timeNow compare: scheduledTime] != NSOrderedDescending) &&
+               ([timePlusHour compare: scheduledTime] != NSOrderedAscending)) {
+                EventToDisplay *addEvent = [[EventToDisplay alloc] initWithName:self.name andReason:self.reason andAmount:self.amount andForm:self.form andTimeToTake:scheduledTime];
+                [eventsInNextHour addObject:addEvent];
+            }
+        }
     }
-    
-    NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
-    NSLocale *deLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"];
-    // Get the numeric value of the day
-    [weekday setDateFormat: @"e"];
-    // Set weekday to start from mon = 1
-    [weekday setLocale:deLocale];
-    
-    NSLog(@"The day of the week is: %@", [weekday stringFromDate:now]);
-
-    
     return eventsInNextHour;
 }
 

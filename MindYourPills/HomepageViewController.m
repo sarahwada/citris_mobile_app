@@ -53,6 +53,7 @@
     
     //[_upcomingTableView setDelegate:<(id UITableViewDelegate)>];
     //[_upcomingTableView setDelegate:<(id UITableViewDelegate)>];
+    [self.upcomingTableView setSeparatorInset:(UIEdgeInsetsZero)];
 
 }
 
@@ -110,16 +111,17 @@
     [sharedEventsList addObject:event];
 
 
-    Event *eventAdd = [[Event alloc] init];
+    Event *eventItem = [[Event alloc] init];
+    NSMutableArray *eventArray = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < [sharedEventsList count]; i++) {
         // getEventsInNextHour
         // put times in sortedUpcomingEvents dict with (k,v) = (time, event)
         // put times in sortedEventTimes array
+        eventItem = sharedEventsList[i];
+        eventArray = [eventItem getEventsInNextHour];
         
         
-        //handling
-        eventAdd = sharedEventsList[i];
         
         //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
         //[outputFormatter setDateFormat:@"HH:mm:ss"];
@@ -129,7 +131,7 @@
         //[outputFormatter release];
 
         
-        NSLog(@"here");
+        NSLog(@"Homepage medication list: iterating through sharedEventsList");
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121BC4E618FA0F5300C19DB8 /* EventToDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */; };
 		126DA80018DF9DFE00233962 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 126DA7FF18DF9DFE00233962 /* Event.m */; };
 		12BCC1EE18DE6467001FD561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1ED18DE6467001FD561 /* Foundation.framework */; };
 		12BCC1F018DE6467001FD561 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12BCC1EF18DE6467001FD561 /* CoreGraphics.framework */; };
@@ -25,8 +26,6 @@
 		12F226CC18DFE4C3006ECAE5 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */; };
 		12F226CE18DFE5AF006ECAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F226CD18DFE5AF006ECAE5 /* main.m */; };
 		A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22BC18DF95FD00D518E0 /* EventsList.m */; };
-		A53E22C318DFAA2600D518E0 /* UpcomingEventsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22C218DFAA2600D518E0 /* UpcomingEventsQueue.m */; };
-		A53E22C618DFB14600D518E0 /* EventsPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */; };
 		D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B594CE18DF7DF000FEE44B /* EditViewController.m */; };
 		D1B594D618DF7DF000FEE44B /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B594CF18DF7DF000FEE44B /* EditViewController.xib */; };
 /* End PBXBuildFile section */
@@ -42,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventToDisplay.h; sourceTree = "<group>"; };
+		121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventToDisplay.m; sourceTree = "<group>"; };
 		126DA7FE18DF9DFE00233962 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		126DA7FF18DF9DFE00233962 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		12BCC1EA18DE6467001FD561 /* MindYourPills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindYourPills.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +69,6 @@
 		12F226CD18DFE5AF006ECAE5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsList.h; sourceTree = "<group>"; };
 		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsList.m; sourceTree = "<group>"; };
-		A53E22C118DFAA2600D518E0 /* UpcomingEventsQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingEventsQueue.h; sourceTree = "<group>"; };
-		A53E22C218DFAA2600D518E0 /* UpcomingEventsQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingEventsQueue.m; sourceTree = "<group>"; };
-		A53E22C418DFB14600D518E0 /* EventsPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsPriorityQueue.h; sourceTree = "<group>"; };
-		A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsPriorityQueue.m; sourceTree = "<group>"; };
 		D1B594CD18DF7DF000FEE44B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		D1B594CE18DF7DF000FEE44B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		D1B594CF18DF7DF000FEE44B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
@@ -112,10 +109,8 @@
 				12F226C518DFE4A0006ECAE5 /* AddViewController.xib */,
 				126DA7FE18DF9DFE00233962 /* Event.h */,
 				126DA7FF18DF9DFE00233962 /* Event.m */,
-				A53E22C418DFB14600D518E0 /* EventsPriorityQueue.h */,
-				A53E22C518DFB14600D518E0 /* EventsPriorityQueue.m */,
-				A53E22C118DFAA2600D518E0 /* UpcomingEventsQueue.h */,
-				A53E22C218DFAA2600D518E0 /* UpcomingEventsQueue.m */,
+				121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */,
+				121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */,
 				A53E22BB18DF95FD00D518E0 /* EventsList.h */,
 				A53E22BC18DF95FD00D518E0 /* EventsList.m */,
 				D1B594CD18DF7DF000FEE44B /* EditViewController.h */,
@@ -291,9 +286,8 @@
 				12F226CB18DFE4C3006ECAE5 /* HomepageViewController.m in Sources */,
 				12F226C618DFE4A0006ECAE5 /* AddViewController.m in Sources */,
 				A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */,
-				A53E22C618DFB14600D518E0 /* EventsPriorityQueue.m in Sources */,
-				A53E22C318DFAA2600D518E0 /* UpcomingEventsQueue.m in Sources */,
 				12F226CE18DFE5AF006ECAE5 /* main.m in Sources */,
+				121BC4E618FA0F5300C19DB8 /* EventToDisplay.m in Sources */,
 				126DA80018DF9DFE00233962 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
