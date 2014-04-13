@@ -111,17 +111,29 @@
     [sharedEventsList addObject:event];
 
 
-    Event *eventItem = [[Event alloc] init];
+    Event *eventAdd = [[Event alloc] init];
     NSMutableArray *eventArray = [[NSMutableArray alloc] init];
+    
+    NSMutableDictionary *eventsDict = [NSMutableDictionary dictionary];
+    NSMutableArray *eventKeys = [NSMutableArray array];
     
     for (int i = 0; i < [sharedEventsList count]; i++) {
         // getEventsInNextHour
         // put times in sortedUpcomingEvents dict with (k,v) = (time, event)
         // put times in sortedEventTimes array
-        eventItem = sharedEventsList[i];
-        eventArray = [eventItem getEventsInNextHour];
+        eventAdd = sharedEventsList[i];
+        eventArray = [eventAdd getEventsInNextHour];
         
         
+        //handling
+        eventAdd = sharedEventsList[i];
+        //NSDate *eventKey = eventAdd.getKey();
+        //if ([eventKeys containsObject:eventKey]) {
+        //    [eventsDict[eventKey] addObject:[eventAdd]];
+        //} else {
+        //    eventsDict[eventKey] = [NSMutableArray arrayWithObjects:eventAdd];
+        //    [eventKeys addObject:[eventKey]];
+        //}
         
         //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
         //[outputFormatter setDateFormat:@"HH:mm:ss"];
@@ -133,6 +145,7 @@
         
         NSLog(@"Homepage medication list: iterating through sharedEventsList");
     }
+    
 
 }
 
