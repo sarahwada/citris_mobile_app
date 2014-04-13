@@ -11,6 +11,7 @@
 #import "EditViewController.h"
 #import "Event.h"
 #import "EventsList.h"
+#import "EventToDisplay.h"
 
 @interface HomepageViewController ()
 
@@ -25,7 +26,7 @@
 @property (nonatomic, weak) NSMutableArray *eventsList;
 //
 @property (nonatomic) NSMutableDictionary *upcomingEvents;
-@property (nonatomic) NSMutableArray *sortedEventTimes;
+@property (nonatomic) NSArray *sortedEventTimes;
 
 @end
 
@@ -36,8 +37,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.upcomingEvents = [NSMutableDictionary dictionary];
-        self.sortedEventTimes = [NSMutableArray array];
+
     }
     return self;
 }
@@ -46,7 +46,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.upcomingEvents = [[NSDictionary alloc] init];
+    self.upcomingEvents = [NSMutableDictionary dictionary];
+    self.sortedEventTimes = [NSArray array];
+    
     [self loadInitialData];
     
     // To set a class to load the table cells for
@@ -56,6 +58,7 @@
     //[_upcomingTableView setDelegate:<(id UITableViewDelegate)>];
     //[_upcomingTableView setDelegate:<(id UITableViewDelegate)>];
     [self.upcomingTableView setSeparatorInset:(UIEdgeInsetsZero)];
+
 
 }
 
@@ -84,9 +87,6 @@
 - (void)loadInitialData {
     // Load next HOUR worth of data into the mutable array
     
-    // iterate, add events within the next hour to the sortedEvents NSMutableArray
-    // sort NSMutableArray
-    
     // added test item
     NSString *name = @"name1";
     NSString *reason = @"reason1";
@@ -112,46 +112,39 @@
     [sharedEventsList addObject:event];
     [sharedEventsList addObject:event];
 
-
-    Event *eventAdd = [[Event alloc] init];
-    NSMutableArray *eventArray = [[NSMutableArray alloc] init];
-    
-    NSMutableDictionary *eventsDict = [NSMutableDictionary dictionary];
-    NSMutableArray *eventKeys = [NSMutableArray array];
+    // The event we're looking at
+    Event *eventToAdd = [[Event alloc] init];
+    // The array of events in the next hour for this array
+    NSMutableArray *eventsToDisplay = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < [sharedEventsList count]; i++) {
         // getEventsInNextHour
-        // put times in sortedUpcomingEvents dict with (k,v) = (time, event)
-        // put times in sortedEventTimes array
-        eventAdd = sharedEventsList[i];
-        eventArray = [eventAdd getEventsInNextHour];
+        eventToAdd = sharedEventsList[i];
+        eventsToDisplay = [eventToAdd getEventsInNextHour];
+      
+        if (eventsToDisplay != NULL) {
+            for (int i = 0; i < [eventsToDisplay count]; i++) {
+                EventToDisplay *eventToDisplay = eventsToDisplay[i];
+                NSDate *reminderTime = eventToDisplay.timeToTake;
+                
+                // If reminder is already in the dictionary:
+                if ([self.upcomingEvents objectForKey: reminderTime] != Nil) {
+                    [self.upcomingEvents[reminderTime] addObject:eventToDisplay];
+                // If reminder
+                } else {
+                    self.upcomingEvents[reminderTime] = [NSMutableArray arrayWithObjects:eventToDisplay, nil];
+                }
         
-        
-        //handling
-        eventAdd = sharedEventsList[i];
-        //NSDate *eventKey = eventAdd.getKey();
-        //if ([eventKeys containsObject:eventKey]) {
-        //    [eventsDict[eventKey] addObject:[eventAdd]];
-        //} else {
-        //    eventsDict[eventKey] = [NSMutableArray arrayWithObjects:eventAdd];
-        //    [eventKeys addObject:[eventKey]];
-        //}
-        
-        
-        
-        //NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-        //[outputFormatter setDateFormat:@"HH:mm:ss"];
-        
-        //NSString *newDateString = [outputFormatter stringFromDate:now];
-        //NSLog(@"newDateString %@", newDateString);
-        //[outputFormatter release];
-
-        
+            }
         NSLog(@"Homepage medication list: iterating through sharedEventsList");
+        }
     }
-    
-    // TODO: sort eventsDict
-
+        
+    // TODO: test this
+    self.sortedEventTimes = [self.upcomingEvents keysSortedByValueUsingComparator:
+                             ^NSComparisonResult(id obj1, id obj2) {
+                                 return [obj2 compare:obj1];
+                             }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -163,7 +156,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section. Required for tableView
-    return [self.sortedUpcomingEvents count];
+    return [self.upcomingEvents count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -176,7 +169,7 @@
     
     NSDate *key = [self.sortedEventTimes objectAtIndex:indexPath.row];
     // DICTIONARY has (key, list_of_events_at_this_time) --> change to display list of events
-    Event *event = [self.sortedUpcomingEvents objectForKey:key];
+    Event *event = [self.upcomingEvents objectForKey:key];
     cell.textLabel.text = event.name;
     
     return cell;
