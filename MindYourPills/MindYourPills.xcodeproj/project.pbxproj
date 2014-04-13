@@ -26,6 +26,8 @@
 		12F226CC18DFE4C3006ECAE5 /* HomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */; };
 		12F226CE18DFE5AF006ECAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F226CD18DFE5AF006ECAE5 /* main.m */; };
 		A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = A53E22BC18DF95FD00D518E0 /* EventsList.m */; };
+		D12BCBFC18FA2BB3004B66E5 /* scheduleTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */; };
+		D12BCBFD18FA2BB3004B66E5 /* scheduleTimesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */; };
 		D1B594D518DF7DF000FEE44B /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B594CE18DF7DF000FEE44B /* EditViewController.m */; };
 		D1B594D618DF7DF000FEE44B /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B594CF18DF7DF000FEE44B /* EditViewController.xib */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,9 @@
 		12F226CD18DFE5AF006ECAE5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsList.h; sourceTree = "<group>"; };
 		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsList.m; sourceTree = "<group>"; };
+		D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scheduleTimesViewController.h; sourceTree = "<group>"; };
+		D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scheduleTimesViewController.m; sourceTree = "<group>"; };
+		D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scheduleTimesViewController.xib; sourceTree = "<group>"; };
 		D1B594CD18DF7DF000FEE44B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		D1B594CE18DF7DF000FEE44B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		D1B594CF18DF7DF000FEE44B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
@@ -101,6 +106,9 @@
 		12BCC1E118DE6467001FD561 = {
 			isa = PBXGroup;
 			children = (
+				D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */,
+				D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */,
+				D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */,
 				12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */,
 				12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */,
 				12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */,
@@ -262,6 +270,7 @@
 				12BCC1F818DE6467001FD561 /* InfoPlist.strings in Resources */,
 				12F226C718DFE4A0006ECAE5 /* AddViewController.xib in Resources */,
 				12BCC20018DE6467001FD561 /* Images.xcassets in Resources */,
+				D12BCBFD18FA2BB3004B66E5 /* scheduleTimesViewController.xib in Resources */,
 				12F226CC18DFE4C3006ECAE5 /* HomepageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +294,7 @@
 				12BCC1FE18DE6467001FD561 /* AppDelegate.m in Sources */,
 				12F226CB18DFE4C3006ECAE5 /* HomepageViewController.m in Sources */,
 				12F226C618DFE4A0006ECAE5 /* AddViewController.m in Sources */,
+				D12BCBFC18FA2BB3004B66E5 /* scheduleTimesViewController.m in Sources */,
 				A53E22BD18DF95FD00D518E0 /* EventsList.m in Sources */,
 				12F226CE18DFE5AF006ECAE5 /* main.m in Sources */,
 				121BC4E618FA0F5300C19DB8 /* EventToDisplay.m in Sources */,
