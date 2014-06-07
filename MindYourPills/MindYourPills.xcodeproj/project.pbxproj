@@ -43,10 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventToDisplay.h; sourceTree = "<group>"; };
-		121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventToDisplay.m; sourceTree = "<group>"; };
-		126DA7FE18DF9DFE00233962 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		126DA7FF18DF9DFE00233962 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventToDisplay.h; path = Models/EventToDisplay.h; sourceTree = "<group>"; };
+		121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventToDisplay.m; path = Models/EventToDisplay.m; sourceTree = "<group>"; };
+		126DA7FE18DF9DFE00233962 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = Models/Event.h; sourceTree = "<group>"; };
+		126DA7FF18DF9DFE00233962 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = Models/Event.m; sourceTree = "<group>"; };
 		12BCC1EA18DE6467001FD561 /* MindYourPills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindYourPills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BCC1ED18DE6467001FD561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12BCC1EF18DE6467001FD561 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,21 +62,21 @@
 		12BCC20E18DE6467001FD561 /* MindYourPillsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MindYourPillsTests-Info.plist"; sourceTree = "<group>"; };
 		12BCC21018DE6467001FD561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12BCC21218DE6467001FD561 /* MindYourPillsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindYourPillsTests.m; sourceTree = "<group>"; };
-		12F226C318DFE4A0006ECAE5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
-		12F226C418DFE4A0006ECAE5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
-		12F226C518DFE4A0006ECAE5 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
-		12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
-		12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
-		12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageViewController.xib; sourceTree = "<group>"; };
+		12F226C318DFE4A0006ECAE5 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddViewController.h; path = Controllers/AddViewController.h; sourceTree = "<group>"; };
+		12F226C418DFE4A0006ECAE5 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = Controllers/AddViewController.m; sourceTree = SOURCE_ROOT; };
+		12F226C518DFE4A0006ECAE5 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddViewController.xib; path = Controllers/AddViewController.xib; sourceTree = "<group>"; };
+		12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomepageViewController.h; path = Controllers/HomepageViewController.h; sourceTree = "<group>"; };
+		12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomepageViewController.m; path = Controllers/HomepageViewController.m; sourceTree = "<group>"; };
+		12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomepageViewController.xib; path = Controllers/HomepageViewController.xib; sourceTree = "<group>"; };
 		12F226CD18DFE5AF006ECAE5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsList.h; sourceTree = "<group>"; };
-		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsList.m; sourceTree = "<group>"; };
-		D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scheduleTimesViewController.h; sourceTree = "<group>"; };
-		D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scheduleTimesViewController.m; sourceTree = "<group>"; };
-		D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scheduleTimesViewController.xib; sourceTree = "<group>"; };
-		D1B594CD18DF7DF000FEE44B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
-		D1B594CE18DF7DF000FEE44B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
-		D1B594CF18DF7DF000FEE44B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		A53E22BB18DF95FD00D518E0 /* EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsList.h; path = Models/EventsList.h; sourceTree = "<group>"; };
+		A53E22BC18DF95FD00D518E0 /* EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsList.m; path = Models/EventsList.m; sourceTree = "<group>"; };
+		D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scheduleTimesViewController.h; path = Controllers/scheduleTimesViewController.h; sourceTree = "<group>"; };
+		D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scheduleTimesViewController.m; path = Controllers/scheduleTimesViewController.m; sourceTree = "<group>"; };
+		D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scheduleTimesViewController.xib; path = Controllers/scheduleTimesViewController.xib; sourceTree = "<group>"; };
+		D1B594CD18DF7DF000FEE44B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = Controllers/EditViewController.h; sourceTree = "<group>"; };
+		D1B594CE18DF7DF000FEE44B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = Controllers/EditViewController.m; sourceTree = "<group>"; };
+		D1B594CF18DF7DF000FEE44B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditViewController.xib; path = Controllers/EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,24 +106,9 @@
 		12BCC1E118DE6467001FD561 = {
 			isa = PBXGroup;
 			children = (
-				D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */,
-				D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */,
-				D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */,
-				12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */,
-				12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */,
-				12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */,
-				12F226C318DFE4A0006ECAE5 /* AddViewController.h */,
-				12F226C418DFE4A0006ECAE5 /* AddViewController.m */,
-				12F226C518DFE4A0006ECAE5 /* AddViewController.xib */,
-				126DA7FE18DF9DFE00233962 /* Event.h */,
-				126DA7FF18DF9DFE00233962 /* Event.m */,
-				121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */,
-				121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */,
-				A53E22BB18DF95FD00D518E0 /* EventsList.h */,
-				A53E22BC18DF95FD00D518E0 /* EventsList.m */,
-				D1B594CD18DF7DF000FEE44B /* EditViewController.h */,
-				D1B594CE18DF7DF000FEE44B /* EditViewController.m */,
-				D1B594CF18DF7DF000FEE44B /* EditViewController.xib */,
+				D1B210FD19438F9700E368C6 /* Models */,
+				D1B210FC19438F9100E368C6 /* Views */,
+				D1B210FB19438F7700E368C6 /* Controllers */,
 				12BCC1F318DE6467001FD561 /* MindYourPills */,
 				12BCC20C18DE6467001FD561 /* MindYourPillsTests */,
 				12BCC1EC18DE6467001FD561 /* Frameworks */,
@@ -189,6 +174,45 @@
 				12BCC20F18DE6467001FD561 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1B210FB19438F7700E368C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1B594CD18DF7DF000FEE44B /* EditViewController.h */,
+				D1B594CE18DF7DF000FEE44B /* EditViewController.m */,
+				D1B594CF18DF7DF000FEE44B /* EditViewController.xib */,
+				D12BCBF918FA2BB3004B66E5 /* scheduleTimesViewController.h */,
+				D12BCBFA18FA2BB3004B66E5 /* scheduleTimesViewController.m */,
+				D12BCBFB18FA2BB3004B66E5 /* scheduleTimesViewController.xib */,
+				12F226C818DFE4C3006ECAE5 /* HomepageViewController.h */,
+				12F226C918DFE4C3006ECAE5 /* HomepageViewController.m */,
+				12F226CA18DFE4C3006ECAE5 /* HomepageViewController.xib */,
+				12F226C318DFE4A0006ECAE5 /* AddViewController.h */,
+				12F226C418DFE4A0006ECAE5 /* AddViewController.m */,
+				12F226C518DFE4A0006ECAE5 /* AddViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D1B210FC19438F9100E368C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D1B210FD19438F9700E368C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				126DA7FE18DF9DFE00233962 /* Event.h */,
+				126DA7FF18DF9DFE00233962 /* Event.m */,
+				121BC4E418FA0F5300C19DB8 /* EventToDisplay.h */,
+				121BC4E518FA0F5300C19DB8 /* EventToDisplay.m */,
+				A53E22BB18DF95FD00D518E0 /* EventsList.h */,
+				A53E22BC18DF95FD00D518E0 /* EventsList.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
